@@ -1,0 +1,59 @@
+
+.task-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  form input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  form input[type="text"]:focus {
+    border-color: teal;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: teal;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  form button:hover {
+    background-color: rgba(16, 57, 57, 0.94);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  h4 {
+    color: #555;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    padding-left: 30px;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #777;
+  }
+  

@@ -1,0 +1,28 @@
+.conditional-container {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    /* border-radius: 8px; */
+    /* max-width: 1000px; */
+    margin: 10px auto;
+    text-align: center;
+    /* background-color: #f9f9f9; */
+}
+
+.display {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.button-container .render-btn {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.render-btn:hover {
+    background-color:gray;
+    color: white;
+}

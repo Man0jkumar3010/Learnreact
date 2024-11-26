@@ -1,0 +1,21 @@
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to left, #6a11cb, #2575fc);
+    box-shadow: 0px 0px 6px 2px black;
+    color: whitesmoke;
+  }
+  
+  .quiz-header .left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quiz-header .left img {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  

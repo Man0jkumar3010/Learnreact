@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './list.css'
 
 export const TaskList = ({ todo, setTodo }) => {
   const [hoveredItem, setHoveredItem] = useState(null)

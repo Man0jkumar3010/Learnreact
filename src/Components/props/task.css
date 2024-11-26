@@ -1,0 +1,54 @@
+
+.task-list-container {
+    max-width: 500px;
+    margin: 0 auto;
+    /* background-color: #fff; */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-list-container ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-list-container li {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .task-list-container .list-items {
+    font-size: 16px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .task-list-container .list-items:hover {
+    color: #007bff;
+  }
+  
+  .task-list-container input[type="checkbox"] {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .task-list-container div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-list-container div:hover {
+    background-color: #f4f4f9;
+  }
+  
+  .task-list-container .list-items[style*="line-through"] {
+    color: #999;
+  }
+  

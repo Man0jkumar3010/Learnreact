@@ -1,24 +1,32 @@
-import "./App.css"
-import { Conditional } from "./Components/Conditional"
-import { Controlled } from "./Components/Controlled Components/Controlled"
-import { UnControlled } from "./Components/Controlled Components/UnControlled"
-import { AddTaskForm } from "./Components/props/AddTaskForm"
-import { UseRef } from "./Components/Ref/UseRef"
+import "./App.css";
+import { Conditional } from "./Components/Condtional/Conditional";
+import { Controlled } from "./Components/Controlled Components/Controlled";
+import { AddTaskForm } from "./Components/props/AddTaskForm";
+import { Index } from "./Components/Quiz/Index";
+import { UseRef } from "./Components/Ref/UseRef";
+import { UseEffect } from "./Components/UseEffect/UseEffect";
+import { UseState } from "./Components/UseState/UseState";
 
 function App() {
   return (
     <div className="App">
-      <Conditional />
-      <hr></hr>
-      <AddTaskForm />
-      <hr></hr>
-      <UseRef />
-      <hr></hr>
-      <Controlled />
-      <hr></hr>
-      <UnControlled />
+     
+        <Conditional />
+
+        <AddTaskForm />
+     
+        <UseRef />
+  
+        <Controlled />
+  
+        <UseEffect />
+  
+        {/* <Index /> */}
+  
+        {/* <UseState /> */}
+  
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

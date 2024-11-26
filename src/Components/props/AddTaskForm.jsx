@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { TaskList } from "./TaskList"
-
+import './task.css'
 export const AddTaskForm = () => {
   const data = [
     {
@@ -60,8 +60,8 @@ export const AddTaskForm = () => {
         information about a component, State is mutable value that is maintain
         within the component.
       </h4>
-      <p>Example...</p>
-      <form onSubmit={handleAddTask}>
+
+      <form onSubmit={handleAddTask} className="task-form">
         <input
           type="text"
           placeholder="Set your Plans"

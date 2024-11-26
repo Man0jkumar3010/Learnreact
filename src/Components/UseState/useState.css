@@ -1,0 +1,33 @@
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    transition: background-color 0.3s ease;
+  }
+  
+  .picture {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .background--active {
+    background-color: purple;
+  }
+  
+  .picture {
+    transform: scale(0.9);
+  }
+
+  .background--inactive {
+    background-color:white;
+  }
+  
+  .picture--active {
+    opacity: 1;
+    transform: scale(1.1);
+    border: 2px solid purple;
+  }
+  

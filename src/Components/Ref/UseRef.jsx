@@ -1,84 +1,59 @@
-import { useRef, useState } from "react"
+import { useRef, useState } from "react";
+import "./ref.css";
 
 export const UseRef = () => {
-  const boxRef = useRef(null)
-  const [box2Color, setBox2Color] = useState("gold")
-  const [box3Color, setBox3Color] = useState("purple")
+  const boxRef = useRef(null); 
+  const [box2Color, setBox2Color] = useState("teal"); 
+  const [box3Color, setBox3Color] = useState("black"); 
 
   const handleBoxSize = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (boxRef.current) {
-      boxRef.current.style.width = "200px"
-      boxRef.current.style.height = "200px"
+      boxRef.current.style.width = "200px";
+      boxRef.current.style.height = "200px";
     }
-  }
+  };
+
 
   const handleChangeBox2Color = () => {
-    setBox2Color(box2Color === "gold" ? "blue" : "gold")
-  }
+    setBox2Color(box2Color === "white" ? "blue" : "gold");
+  };
+
 
   const handleChangeBox3Color = () => {
-    setBox3Color(box3Color === "purple" ? "green" : "purple")
-  }
+    setBox3Color(box3Color === "black" ? "green" : "purple");
+  };
 
   return (
-    <>
+    <div className="use-ref-container">
       <h1>UseRef</h1>
       <h4>
-        Explanation: useRef is a React hook used to reference DOM elements or
-        values without triggering a re-render. Unlike state, changes to `useRef`
-        values do not cause the component to re-render. It returns a mutable
-        object that persists across renders.
+        <strong>Explanation:</strong> UseRef allows manipulating DOM elements
+        directly. Box1 demonstrates size manipulation, while Box2 and Box3
+        demonstrate dynamic state-based color changes.
       </h4>
-      <p>
-        Example: This example demonstrates two div elements. One uses `useRef`
-        to change its size, while the others use `useState` to dynamically
-        change their colors.
-      </p>
-      <div
-        style={{
-          display: "flex",
-          gap: "10px",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-        }}>
-        <div
-          ref={boxRef}
-          style={{ height: "100px", width: "100px", backgroundColor: "red" }}>
-          Box1
-          <button onClick={handleBoxSize}>Change Size</button>
-        </div>
 
-        <div
-          style={{
-            height: "100px",
-            width: "100px",
-            backgroundColor: box2Color,
-            position: "relative",
-          }}>
-          Box2
-          <button
-            style={{
-              position: "absolute",
-              left: 0,
-              display: "inline",
-            }}
-            onClick={handleChangeBox2Color}>
-            Change Color
-          </button>
+      <div className="box-tasks-container">
+        <div className="box-task">
+          <div ref={boxRef} className="box box1">
+            Box1
+          </div>
+          <button onClick={handleBoxSize} className="button1">Change Size</button>
         </div>
+        <div className="box-task">
+          <div className="box box2" style={{ backgroundColor: box2Color }}>
+            Box2
+          </div>
+          <button onClick={handleChangeBox2Color}  className="button2">Change Color</button>
+        </div>
+        <div className="box-task">
 
-        <div
-          style={{
-            height: "100px",
-            width: "100px",
-            backgroundColor: box3Color,
-          }}>
-          Box3
-          <button onClick={handleChangeBox3Color}>Change Color</button>
+          <div className="box box3" style={{ backgroundColor: box3Color }}>
+            Box3
+          </div>
+          <button onClick={handleChangeBox3Color}  className="button3">Change Color</button>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
