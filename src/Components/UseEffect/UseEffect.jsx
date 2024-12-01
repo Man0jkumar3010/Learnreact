@@ -15,7 +15,7 @@ export const UseEffect = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `https://jsonplaceholder.typicode.com/posts?_page=${currentPage}&_limit=${postsPerPage}`
+          `${process.env.REACT_APP_API_POSTS}?_page=${currentPage}&_limit=${postsPerPage}`
         );
         setLoading(false);
         if (response.status === 200) {

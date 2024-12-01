@@ -1,0 +1,15 @@
+.disable-btn {
+    background-color: lightgray;
+    cursor: not-allowed;
+  }
+  
+  .country-btn {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .navbar {
+    font-family: Arial, sans-serif;
+  }
+  

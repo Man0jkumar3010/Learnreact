@@ -2,6 +2,8 @@
   margin-top: 50px;
   border-top: 1px solid black ;
   opacity: 1;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
 }
 
 .header {
@@ -82,7 +84,7 @@
 }
 
 .btns:hover:not(:disabled) {
-  background-color: orangered;
+  background-color: rgb(88, 22, 118);
   color: #fff;
   border: none;
 }

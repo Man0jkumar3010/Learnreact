@@ -20,9 +20,10 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    background-color:gray;
 }
 
 .render-btn:hover {
-    background-color:gray;
+    background-color: rgba(88, 86, 86, 0.951);
     color: white;
 }
