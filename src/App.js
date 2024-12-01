@@ -1,8 +1,6 @@
 import "./App.css";
 import { createBrowserRouter, NavLink, Outlet, RouterProvider } from "react-router-dom";
 
-
-import { Header } from "./Components/Router/Header";
 import { Footer } from "./Components/Router/Footer";
 import { ErrorPage } from "./pages/ErrorPage";
 import { Home } from "./pages/Home";

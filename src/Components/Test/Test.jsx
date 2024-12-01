@@ -2,7 +2,7 @@ import { useState } from "react";
 import Child from "./Child";
 
 export const Test = () => {
-  const [data, setData] = useState(["Manoj", 22, "manoj@gmail.com"]);
+  const [data] = useState(["Manoj", 22, "manoj@gmail.com"]);
   
   return (
     <div>
