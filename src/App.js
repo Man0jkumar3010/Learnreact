@@ -1,7 +1,10 @@
-import "./App.css";
-import { createBrowserRouter, NavLink, Outlet, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  NavLink,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom";
 
-import { Footer } from "./Components/Router/Footer";
 import { ErrorPage } from "./pages/ErrorPage";
 import { Home } from "./pages/Home";
 import { Products } from "./pages/Products";
@@ -21,6 +24,8 @@ import StateUpdateObject from "./Components/StateUpdate/StateUpdateObject";
 import StateUpdateArray from "./Components/StateUpdateArray/StateUpdateArray";
 import { ForwardRef } from "./Components/ForwardRef/ForwardRef";
 import { Test } from "./Components/Test/Test";
+import "./App.css";
+import { ProductDetails } from "./pages/ProductDetails";
 
 const Layout = () => {
   return (
@@ -28,111 +33,144 @@ const Layout = () => {
       <nav className="navbar">
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Home
         </NavLink>
         <NavLink
           to="/products"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Products
         </NavLink>
         <NavLink
           to="/contacts"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Contact
         </NavLink>
         <NavLink
           to="/conditional"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Conditional
         </NavLink>
         <NavLink
           to="/add-task"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Add Task
         </NavLink>
         <NavLink
           to="/use-ref"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Use Ref
         </NavLink>
         <NavLink
           to="/controlled"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Controlled
         </NavLink>
         <NavLink
           to="/use-effect"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Use Effect
         </NavLink>
         <NavLink
           to="/temperature-converter"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Temperature
         </NavLink>
         <NavLink
           to="/list"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           List
         </NavLink>
         <NavLink
           to="/event-handling"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Event Handling
         </NavLink>
         <NavLink
           to="/composition"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Composition
         </NavLink>
         <NavLink
           to="/lifecycle"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Lifecycle
         </NavLink>
         <NavLink
           to="/state-object"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           State Object
         </NavLink>
         <NavLink
           to="/state-array"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           State Array
         </NavLink>
         <NavLink
           to="/forward-ref"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Forward Ref
         </NavLink>
         <NavLink
           to="/test"
-          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
         >
           Test
         </NavLink>
       </nav>
       <div className="main-content">
-        <Outlet />
+          <Outlet />   
       </div>
-      <Footer />
     </div>
   );
 };
@@ -144,7 +182,16 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/products", element: <Products /> },
+      {
+        path: "/products",
+        element: <Products />,
+        children: [
+          {
+            path: ":id",
+            element: <ProductDetails />,
+          },
+        ],
+      },
       { path: "/contacts", element: <Contact /> },
       { path: "/conditional", element: <Conditional /> },
       { path: "/add-task", element: <AddTaskForm /> },
