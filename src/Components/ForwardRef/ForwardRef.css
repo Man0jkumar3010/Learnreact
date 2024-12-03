@@ -1,0 +1,35 @@
+/* ForwardRef.css */
+.forward-ref-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+  .forward-ref-heading {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  
+  .input-field {
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    margin-top: 10px;
+  }
+  
+  .focus-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .focus-button:hover {
+    background-color: #45a049;
+  }
+  

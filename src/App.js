@@ -23,9 +23,14 @@ import LifecycleUseEffect from "./Components/LifeCycle/LifeCycleUseEffect";
 import StateUpdateObject from "./Components/StateUpdate/StateUpdateObject";
 import StateUpdateArray from "./Components/StateUpdateArray/StateUpdateArray";
 import { ForwardRef } from "./Components/ForwardRef/ForwardRef";
-import { Test } from "./Components/Test/Test";
-import "./App.css";
 import { ProductDetails } from "./pages/ProductDetails";
+import Form from "./Components/CustomHook/Form";
+import { TodoList } from "./Components/Usecallback/TodoList";
+import "./App.css";
+import { ThemeProvider } from "./Components/UseContext/ThemeContext";
+import { ThemeSwitcher } from "./Components/UseContext/ThemeSwitcher";
+import { FactorialCalculator } from "./Components/UseMemo/FactorialCalculator";
+
 
 const Layout = () => {
   return (
@@ -160,16 +165,40 @@ const Layout = () => {
           Forward Ref
         </NavLink>
         <NavLink
-          to="/test"
+          to="/customhook"
           className={({ isActive }) =>
             isActive ? "nav-link active" : "nav-link"
           }
         >
-          Test
+          Custom Hook
         </NavLink>
+        <NavLink
+          to="/callback"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Use Callback
+        </NavLink>
+        <NavLink
+          to="/usecontext"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Use Context
+        </NavLink>
+        <NavLink
+          to="/usememo"
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
+          Use Memo
+          </NavLink>
       </nav>
       <div className="main-content">
-          <Outlet />   
+        <Outlet />
       </div>
     </div>
   );
@@ -206,12 +235,20 @@ const router = createBrowserRouter([
       { path: "/state-object", element: <StateUpdateObject /> },
       { path: "/state-array", element: <StateUpdateArray /> },
       { path: "/forward-ref", element: <ForwardRef /> },
-      { path: "/test", element: <Test /> },
+      { path: "/customhook", element: <Form /> },
+      {path:"/callback",element:<TodoList/>},
+      { path: "/usecontext", element: (
+       <ThemeProvider>
+          <ThemeSwitcher/>
+       </ThemeProvider>
+      ) },
+      { path: "/usememo", element: <FactorialCalculator /> }
     ],
   },
 ]);
 
 function App() {
+
   return <RouterProvider router={router} />;
 }
 

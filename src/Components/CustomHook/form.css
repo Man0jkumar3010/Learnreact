@@ -1,0 +1,89 @@
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .form-style {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .form-style h2 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .btn-save {
+    background-color: rgba(240, 69, 12, 0.843);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .btn-save:hover{
+    background-color: orangered;
+
+  }
+  
+
+  .inbox-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .inbox-table thead {
+    color: gray;
+    text-align: center;
+  }
+  
+  .inbox-table th,
+  .inbox-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .inbox-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .inbox-table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .inbox-table td {
+    word-break: break-word;
+    text-align: left;
+  }
+  
